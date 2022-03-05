@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'sk';
+    src: url(/public/font/SKConcretica-RegularTrial.ttf) format('woff')
+}
+
+@font-face {
+    font-family: 'wf';
+    src: url(/public/font/w95fa.woff2) format('woff2')
+}
+
+@import url("https://use.typekit.net/wxe6mux.css");
+$titre :'sk';
+$corps: courier-std,
+monospace;
+$small:0.7em;
+$medium:1em;
+$large: 2.5em;
+@keyframes glitch {
+    0% {
+        text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+        transform: translate(var(--glitch-translate));
+    }
+    2% {
+        text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%,
+    100% {
+        text-shadow: none;
+        transform: none;
+    }
+}
+
+@keyframes stack {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+        text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    }
+    ;
+    60% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+        text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
